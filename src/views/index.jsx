@@ -7,7 +7,7 @@ class IndexView extends React.Component{
   constructor(props) {
     super(props)
 
-    this.handleSignOut = this.handleSignOut.bind(this)
+     this.handleSignOut = this.handleSignOut.bind(this)
   }
 
   handleSignOut(){
