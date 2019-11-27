@@ -3,6 +3,7 @@ import {Grid, Menu, MenuItem, Button, Segment, Card, Label} from 'semantic-ui-re
 import { Link, withRouter } from 'react-router-dom'
 import logoImg from '../logo.png'
 import AuthService from '../services/auth.service'
+import Tasks from "./tasks";
 
 class IndexView extends React.Component{
   constructor(props) {
@@ -30,18 +31,9 @@ class IndexView extends React.Component{
                 <Button onClick={this.handleSignOut} color='red'>Выйти</Button>
                </MenuItem>
             </Menu>
-            <Segment textAlign='left' raised>
-              <h1>Список задач:</h1>
-              <Card.Group>
-                <Card fluid>
-                  <Card.Content>
-                    <Card.Header>Заголовок</Card.Header>
-                    <Card.Meta><Label size='tiny' color='teal'>Done</Label></Card.Meta>
-                    <Card.Description>Описание</Card.Description>
-                  </Card.Content>
-                </Card>
-              </Card.Group>
-            </Segment>
+
+            <Tasks />
+
           </Grid.Column>
         </Grid>
     )
