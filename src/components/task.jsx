@@ -5,11 +5,14 @@ import PropTypes from 'prop-types'
 class Task extends React.Component {
 
     render() {
-        const { text } = this.props.data
+        const { id,author_id,text } = this.props.data
         return (
-            <div className="task">
-                <p className="task__text">{text}</p>
-            </div>
+        <Card fluid>
+            <Card.Content>
+                {/*<Card.Meta><Label size='tiny' color='red'>удалить</Label></Card.Meta>*/}
+                <Card.Description>{text}</Card.Description>
+            </Card.Content>
+        </Card>
         )
     }
 }

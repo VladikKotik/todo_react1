@@ -16,8 +16,8 @@ class IndexView extends React.Component{
   }
 
   render() {
-    const isLoggedIn = !!localStorage.getItem('token')
-    !isLoggedIn && this.props.history.push('/login')
+    //const isLoggedIn = !!localStorage.getItem('token')
+    //!isLoggedIn && this.props.history.push('/login')
     return (
         <Grid textAlign='center' style={{ height: '100vh', margin: '0px' }}>
           <Grid.Column style={{ width: 1000 }}>

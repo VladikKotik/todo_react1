@@ -9,7 +9,7 @@ class Add extends React.Component {
     }
     onBtnClickHandler = e => {
         e.preventDefault()
-        const { author_id, text, bigText } = this.state
+        const { author_id, text } = this.state
         this.props.onAddTasks({
             id: +new Date(),
             author_id: localStorage.getItem('current_user'),
