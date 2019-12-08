@@ -4,18 +4,18 @@ import './App.css';
 import AuthView from "./components/auth";
 import IndexView from "./components/index"
 import 'semantic-ui-css/semantic.min.css'
-import AuthService from "./services/auth.service"
+//import AuthService from "./services/auth.service"
 import store_auth from "./stores/store_auth";
 
 function App() {
     return (
         <BrowserRouter>
         <Switch>
-            <Route path='/login' component={AuthView}>
-            </Route>
-            <PrivateRoute path='/' component={IndexView}>
+            <Route path='/login' component={AuthView}/>
 
-            </PrivateRoute>
+            <PrivateRoute path='/' component={IndexView}/>
+
+
         </Switch>
         </BrowserRouter>
     );

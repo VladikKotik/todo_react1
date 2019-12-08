@@ -1,6 +1,7 @@
 import React from 'react'
 import {Card, Grid, Label, Segment} from "semantic-ui-react";
 import PropTypes from 'prop-types'
+import TasksStore from '../stores/tasks_store'
 
 class Add extends React.Component {
     state = {
@@ -9,8 +10,8 @@ class Add extends React.Component {
     }
     onBtnClickHandler = e => {
         e.preventDefault()
-        const { author_id, text } = this.state
-        this.props.onAddTasks({
+        const { /*author_id,*/ text } = this.state
+        TasksStore.Add({
             id: +new Date(),
             author_id: localStorage.getItem('current_user'),
             text
@@ -22,7 +23,7 @@ class Add extends React.Component {
     }
     validate = () => {
         const { author_id, text } = this.state
-        if (author_id.trim() && text.trim()) {
+        if (/*author_id.trim() &&*/ text.trim()) {
             return true
         }
         return false

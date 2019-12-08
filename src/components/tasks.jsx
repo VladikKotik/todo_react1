@@ -2,6 +2,7 @@ import React from 'react'
 import {Card, Grid, Label, Segment} from "semantic-ui-react";
 import Add from './add';
 import Task from './task';
+import TasksStore from '../stores/tasks_store'
 
 class Tasks extends React.Component {
 
@@ -10,21 +11,25 @@ class Tasks extends React.Component {
         localStorage.setItem('tasks', nextTasks)
     }
 
+
+
     renderTasks = () => {
-        const {data} = this.props
+        const data = TasksStore.tasks
         let taskTemplate = null
 
-        if (data.length) {
+        if (data && data.length) {
             taskTemplate = data.map(function (item) {
                 return <Task key={item.id} data={item}/>
             })
         } else {
             taskTemplate = <p>заметок.net</p>
         }
+        return taskTemplate
     }
 
     render() {
-        const tasks = localStorage.getItem('tasks')
+        //const tasks = localStorage.getItem('tasks')
+        const tasks = TasksStore.tasks
         return (
             <div>
                 <Add onAddTasks={this.handleChangedTasks}/>

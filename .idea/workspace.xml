@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2702967-7917-437e-be63-3a2986c8c8bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/stores/store_auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stores/tasks_store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/add_edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/add.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/task.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/store_auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/store_auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/tasks_store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/tasks_store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +95,8 @@
       <workItem from="1575206532863" duration="4180000" />
       <workItem from="1575284750874" duration="2756000" />
       <workItem from="1575469454426" duration="2179000" />
-      <workItem from="1575517622562" duration="15304000" />
+      <workItem from="1575517622562" duration="15464000" />
+      <workItem from="1575784795917" duration="11778000" />
     </task>
     <task id="LOCAL-00001" summary="first commit(it works)">
       <created>1574604469337</created>
@@ -125,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574872135093</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="private routing and mobx doesnt work">
+      <created>1575569379571</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575569379571</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +157,7 @@
     <MESSAGE value="fixed routing" />
     <MESSAGE value="note protection(redirect)" />
     <MESSAGE value="some" />
-    <option name="LAST_COMMIT_MESSAGE" value="some" />
+    <MESSAGE value="private routing and mobx doesnt work" />
+    <option name="LAST_COMMIT_MESSAGE" value="private routing and mobx doesnt work" />
   </component>
 </project>

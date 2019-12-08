@@ -1,6 +1,6 @@
 import ApiService from "./api.service";
 import TokenService from "./token.service"
-export const ID_USER_ID_KEY = 'user-id'
+export const ID_USER_ID_KEY = 'current_user'
 
 class AuthService {
   login(email, password) {

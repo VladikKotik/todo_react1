@@ -1,7 +1,8 @@
 import {computed, observable} from "mobx"
 
 export class store_auth {
-    @observable isLoggedIn =  !!localStorage.getItem('token')
+    isLoggedIn =  !!localStorage.getItem('token')
+    curUserId =  !!localStorage.getItem('current_user')
 
     // signIn(){
     //
