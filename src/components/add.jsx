@@ -11,7 +11,7 @@ class Add extends React.Component {
     onBtnClickHandler = e => {
         e.preventDefault()
         const { /*author_id,*/ text } = this.state
-        TasksStore.Add({
+        TasksStore.add({
             id: +new Date(),
             author_id: localStorage.getItem('current_user'),
             text

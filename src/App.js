@@ -4,8 +4,11 @@ import './App.css';
 import AuthView from "./components/auth";
 import IndexView from "./components/index"
 import 'semantic-ui-css/semantic.min.css'
+import {inject, observer} from "mobx-react";
 //import AuthService from "./services/auth.service"
 import store_auth from "./stores/store_auth";
+import {decorate, observable} from "mobx";
+import {TasksStore} from "./stores/tasks_store";
 
 function App() {
     return (
@@ -21,8 +24,8 @@ function App() {
     );
 }
 
-function PrivateRoute({component, ...rest}) {
-    const isloggedin_ = store_auth.isLoggedIn
+function  PrivateRoute({component, ...rest}) {
+    const isloggedin_ = store_auth.isLoggedIn //observer чет так и не понял, куда на нее повешать, а вроде и не надо
 
     return (
         <Route
@@ -40,5 +43,6 @@ function PrivateRoute({component, ...rest}) {
         />
     )
 }
+
 
 export default App;

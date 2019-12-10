@@ -1,4 +1,4 @@
-import {computed, observable} from "mobx"
+import {computed, decorate, observable, action} from "mobx";
 
 export class TasksStore {
     tasks = [
@@ -24,18 +24,17 @@ export class TasksStore {
         },
     ]
 
-    // delete(id) {
-    //     this.tasks.map(function (item) {
-    //         if (item.id == id) {
-    //             let index = this.tasks.indexOf(item)    //тут беда с контекстом/областью видимости типа
-    //             delete this.tasks[index]
-    //         }
-    //     })
-    // }
+    delete = (id) => {
+        console.log('id',id)
+        this.tasks = this.tasks.filter((task)=> task.id !== id)
+    }
 
-    Add = data => {
+    add = (data) => {
         const nextTasks = [data, ...this.tasks]
         this.tasks=nextTasks
     }
 }
-export default new TasksStore()
+export default decorate( new TasksStore(), {
+    tasks: observable,
+    delete: action
+})

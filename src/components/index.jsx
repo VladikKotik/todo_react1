@@ -6,38 +6,37 @@ import AuthService from '../services/auth.service'
 import Tasks from "./tasks";
 
 class IndexView extends React.Component{
-  constructor(props) {
-    super(props)
-  }
+    constructor(props) {
+        super(props)
+    }
 
-  handleSignOut = () => {
-    AuthService.logout()
-    this.props.history.push('/login')
-  }
+    handleSignOut = () => {
+        AuthService.logout()
+        this.props.history.push('/login')
+    }
 
-  render() {
-    //const isLoggedIn = !!localStorage.getItem('token')
-    //!isLoggedIn && this.props.history.push('/login')
-    return (
-        <Grid textAlign='center' style={{ height: '100vh', margin: '0px' }}>
-          <Grid.Column style={{ width: 1000 }}>
-            <Menu>
-              <MenuItem>
-                <img src={logoImg}/>
-                <h4 style={{margin: '0 0 0 10px'}}>ToDo App</h4>
-              </MenuItem>
+    render() {
 
-              <MenuItem position='right'>
-                <Button onClick={this.handleSignOut} color='red'>Выйти</Button>
-               </MenuItem>
-            </Menu>
+        return (
+            <Grid textAlign='center' style={{ height: '100vh', margin: '0px' }}>
+                <Grid.Column style={{ width: 1000 }}>
+                    <Menu>
+                        <MenuItem>
+                            <img src={logoImg}/>
+                            <h4 style={{margin: '0 0 0 10px'}}>ToDo App</h4>
+                        </MenuItem>
 
-            <Tasks />
+                        <MenuItem position='right'>
+                            <Button onClick={this.handleSignOut} color='red'>Выйти</Button>
+                        </MenuItem>
+                    </Menu>
 
-          </Grid.Column>
-        </Grid>
-    )
-  }
+                    <Tasks />
+
+                </Grid.Column>
+            </Grid>
+        )
+    }
 
 
 }
