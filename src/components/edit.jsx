@@ -3,16 +3,17 @@ import {Card, Grid, Label, Segment} from "semantic-ui-react";
 import PropTypes from 'prop-types'
 import TasksStore from '../stores/tasks_store'
 
-class Add extends React.Component {
+class EditView extends React.Component {
     state = {
+        id: this.props.location.state.id,
         author_id: '',
-        text: ''
+        text: this.props.location.state.text
     }
     onBtnClickHandler = e => {
         e.preventDefault()
-        const { /*author_id,*/ text } = this.state
-        TasksStore.add({
-            id: +new Date(),
+        const { /*author_id,*/ id, text } = this.state
+        TasksStore.edit({
+            id,
             author_id: localStorage.getItem('current_user'),
             text
         })
@@ -35,12 +36,12 @@ class Add extends React.Component {
                 <textarea
                     id="text"
                     onChange={this.handleChange}
-                    className="add__text"
+                    className="edit__text"
                     placeholder="Текст заметки"
                     value={text}
                 />
                 <button
-                    className="add__btn"
+                    className="edit__btn"
                     onClick={this.onBtnClickHandler}
                     disabled={!this.validate()}
                 > готово </button>
@@ -49,8 +50,8 @@ class Add extends React.Component {
     }
 }
 
-// Add.propTypes = {
+// EditView.propTypes = {
 //     onAddTasks: PropTypes.func.isRequired,
 // }
 
-export default Add
+export default EditView

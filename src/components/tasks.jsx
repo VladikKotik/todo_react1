@@ -7,10 +7,10 @@ import TasksStore from '../stores/tasks_store'
 
 class Tasks extends React.Component {
 
-    handleChangedTasks = data => {
-        const nextTasks = [data, ...this.tasks]
-        localStorage.setItem('tasks', nextTasks)
-    }
+    // handleChangedTasks = data => {
+    //     const nextTasks = [data, ...this.tasks]
+    //     localStorage.setItem('tasks', nextTasks)
+    // }
 
 
 
@@ -31,7 +31,8 @@ class Tasks extends React.Component {
     render() {
         return (
             <div>
-                <Add onAddTasks={this.handleChangedTasks}/>
+                <Add/>
+                {/*//onAddTasks={this.handleChangedTasks}/>*/}
               <Segment textAlign='center' raised>
                     <h1>Список задач:</h1>
 

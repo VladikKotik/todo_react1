@@ -25,13 +25,18 @@ export class TasksStore {
     ]
 
     delete = (id) => {
-        console.log('id',id)
+        //console.log('id',id)
         this.tasks = this.tasks.filter((task)=> task.id !== id)
     }
 
     add = (data) => {
         const nextTasks = [data, ...this.tasks]
         this.tasks=nextTasks
+    }
+
+    edit = (data) => {  //думал искать его, потом решил сделать втупую. если бы там была бек или база, а тот тут собирать/разбираь массив
+        this.delete(data.id)
+        this.add(data)
     }
 }
 export default decorate( new TasksStore(), {
