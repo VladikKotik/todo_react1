@@ -14,14 +14,12 @@ import {TasksStore} from "./stores/tasks_store";
 function App() {
     return (
         <BrowserRouter>
-        <Switch>
-            <Route path='/login' component={AuthView}/>
+            <Switch>
+                <PrivateRoute exact path='/' component={IndexView}/>
+                <Route path='/login' component={AuthView}/>
+                <PrivateRoute path='/edit' component={EditView}/>
 
-            <PrivateRoute path='/' component={IndexView}/>
-
-            <PrivateRoute path='/edit' component={EditView}/>
-
-        </Switch>
+            </Switch>
         </BrowserRouter>
     );
 }
@@ -38,7 +36,7 @@ function  PrivateRoute({component, ...rest}) {
                 ) : (
                     <Redirect to={{
                         pathname: '/login',
-                        state: {from: location}
+                        // state: {from: location}
                     }}/>
                 )
             }

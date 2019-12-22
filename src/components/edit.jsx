@@ -17,6 +17,7 @@ class EditView extends React.Component {
             author_id: localStorage.getItem('current_user'),
             text
         })
+        this.props.history.push('/')
     }
     handleChange = e => {
         const { id, value } = e.currentTarget
@@ -30,9 +31,10 @@ class EditView extends React.Component {
         return false
     }
     render() {
+        console.log(this.props);
         const { author_id, text } = this.state
         return (
-            <form className="add">
+            <form className="edit">
                 <textarea
                     id="text"
                     onChange={this.handleChange}

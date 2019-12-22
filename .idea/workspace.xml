@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2702967-7917-437e-be63-3a2986c8c8bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/edit.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/add.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/edit.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/task.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/tasks_store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/tasks_store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +94,8 @@
       <workItem from="1575517622562" duration="15464000" />
       <workItem from="1575784795917" duration="11917000" />
       <workItem from="1575982943918" duration="8018000" />
-      <workItem from="1576761663203" duration="7082000" />
+      <workItem from="1576761663203" duration="7257000" />
+      <workItem from="1577020264977" duration="3249000" />
     </task>
     <task id="LOCAL-00001" summary="first commit(it works)">
       <created>1574604469337</created>
@@ -146,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575998639562</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="edit try">
+      <created>1576769440141</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1576769440141</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +180,7 @@
     <MESSAGE value="private routing and mobx doesnt work" />
     <MESSAGE value="add/delete" />
     <MESSAGE value="add/delete works" />
-    <option name="LAST_COMMIT_MESSAGE" value="add/delete works" />
+    <MESSAGE value="edit try" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit try" />
   </component>
 </project>

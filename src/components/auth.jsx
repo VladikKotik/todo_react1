@@ -34,7 +34,10 @@ class AuthView extends React.Component{
     signIn(){
         AuthService.login(this.state.email, this.state.password)
             .then(() => {
+                console.log('oooaooao')
                 this.props.history.push('/')
+                console.log('oooaooao2')
+
             })
             .catch(error => {
                 this.setState({error})
