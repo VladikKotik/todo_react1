@@ -1,6 +1,6 @@
 import React from 'react'
-import {Card, Grid, Label, Segment} from "semantic-ui-react";
-import {inject, observer} from "mobx-react";
+import {Card, Segment} from "semantic-ui-react";
+import {observer} from "mobx-react";
 import Add from './add';
 import Task from './task';
 import TasksStore from '../stores/tasks_store'

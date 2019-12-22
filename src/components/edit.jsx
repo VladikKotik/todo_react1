@@ -1,7 +1,6 @@
 import React from 'react'
-import {Card, Grid, Label, Segment} from "semantic-ui-react";
-import PropTypes from 'prop-types'
 import TasksStore from '../stores/tasks_store'
+import {useLocation, withRouter} from "react-router-dom";
 
 class EditView extends React.Component {
     state = {
@@ -11,7 +10,7 @@ class EditView extends React.Component {
     }
     onBtnClickHandler = e => {
         e.preventDefault()
-        const { /*author_id,*/ id, text } = this.state
+        const { /*author_id,*/ id, text} = this.state
         TasksStore.edit({
             id,
             author_id: localStorage.getItem('current_user'),
@@ -20,19 +19,20 @@ class EditView extends React.Component {
         this.props.history.push('/')
     }
     handleChange = e => {
-        const { id, value } = e.currentTarget
-        this.setState({ [id]: e.currentTarget.value })
+        const {id, value} = e.currentTarget
+        this.setState({[id]: e.currentTarget.value})
     }
     validate = () => {
-        const { author_id, text } = this.state
+        const {author_id, text} = this.state
         if (/*author_id.trim() &&*/ text.trim()) {
             return true
         }
         return false
     }
+
     render() {
         console.log(this.props);
-        const { author_id, text } = this.state
+        const {author_id, text} = this.state
         return (
             <form className="edit">
                 <textarea
@@ -46,7 +46,8 @@ class EditView extends React.Component {
                     className="edit__btn"
                     onClick={this.onBtnClickHandler}
                     disabled={!this.validate()}
-                > готово </button>
+                > готово
+                </button>
             </form>
         )
     }
@@ -56,4 +57,4 @@ class EditView extends React.Component {
 //     onAddTasks: PropTypes.func.isRequired,
 // }
 
-export default EditView
+export default withRouter(EditView)

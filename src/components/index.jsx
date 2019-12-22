@@ -1,11 +1,11 @@
 import React from 'react'
-import {Grid, Menu, MenuItem, Button, Segment, Card, Label} from 'semantic-ui-react'
-import { Link, withRouter } from 'react-router-dom'
+import {Button, Grid, Menu, MenuItem} from 'semantic-ui-react'
+import {withRouter} from 'react-router-dom'
 import logoImg from '../logo.png'
 import AuthService from '../services/auth.service'
 import Tasks from "./tasks";
 
-class IndexView extends React.Component{
+class IndexView extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -18,8 +18,8 @@ class IndexView extends React.Component{
     render() {
 
         return (
-            <Grid textAlign='center' style={{ height: '100vh', margin: '0px' }}>
-                <Grid.Column style={{ width: 1000 }}>
+            <Grid textAlign='center' style={{height: '100vh', margin: '0px'}}>
+                <Grid.Column style={{width: 1000}}>
                     <Menu>
                         <MenuItem>
                             <img src={logoImg}/>
@@ -31,7 +31,7 @@ class IndexView extends React.Component{
                         </MenuItem>
                     </Menu>
 
-                    <Tasks />
+                    <Tasks/>
 
                 </Grid.Column>
             </Grid>

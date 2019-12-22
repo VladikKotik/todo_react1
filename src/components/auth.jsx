@@ -1,15 +1,15 @@
 import React from 'react'
-import { withRouter, useLocation } from "react-router-dom";
-import { Button, Grid, Header, Form, Message, Segment } from 'semantic-ui-react'
+import {useLocation, withRouter} from "react-router-dom";
+import {Button, Form, Grid, Header, Message, Segment} from 'semantic-ui-react'
 import AuthService from "../services/auth.service";
 
-const Settings = () => {
-    let location = useLocation();
-    console.log(location)
-}
+// const Settings = () => {
+//     let location = useLocation();
+//     console.log(location)
+// }
 
-class AuthView extends React.Component{
-    constructor(props){
+class AuthView extends React.Component {
+    constructor(props) {
         super(props)
 
         this.state = {
@@ -31,7 +31,7 @@ class AuthView extends React.Component{
         });
     }
 
-    signIn(){
+    signIn() {
         AuthService.login(this.state.email, this.state.password)
             .then(() => {
                 console.log('oooaooao')
@@ -44,7 +44,7 @@ class AuthView extends React.Component{
             })
     }
 
-    signUp(){
+    signUp() {
         AuthService.createUser(this.state.email, this.state.password)
             .then(this.signIn)
             .catch(error => {
@@ -61,12 +61,14 @@ class AuthView extends React.Component{
         /> : ''
 
         return (
-            <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
-                <Grid.Column style={{ maxWidth: 450 }}>
+            <Grid textAlign='center' style={{height: '100vh'}} verticalAlign='middle'>
+                <Grid.Column style={{maxWidth: 450}}>
                     <Header as='h2' textAlign='center'>Авторизация</Header>
                     <Form size='large' error>
                         <Segment raised>
-                            <Form.Input fluid name='email' icon='user' value={this.state.email} onChange={this.handleInputChange} iconPosition='left' placeholder='E-mail address' />
+                            <Form.Input fluid name='email' icon='user' value={this.state.email}
+                                        onChange={this.handleInputChange} iconPosition='left'
+                                        placeholder='E-mail address'/>
                             <Form.Input
                                 fluid
                                 value={this.state.password}

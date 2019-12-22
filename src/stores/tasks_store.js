@@ -1,4 +1,4 @@
-import {computed, decorate, observable, action} from "mobx";
+import {action, decorate, observable} from "mobx";
 
 export class TasksStore {
     tasks = [
@@ -26,12 +26,12 @@ export class TasksStore {
 
     delete = (id) => {
         //console.log('id',id)
-        this.tasks = this.tasks.filter((task)=> task.id !== id)
+        this.tasks = this.tasks.filter((task) => task.id !== id)
     }
 
     add = (data) => {
         const nextTasks = [data, ...this.tasks]
-        this.tasks=nextTasks
+        this.tasks = nextTasks
     }
 
     edit = (data) => {  //думал искать его, потом решил сделать втупую. если бы там была бек или база, а тот тут собирать/разбираь массив
@@ -39,7 +39,8 @@ export class TasksStore {
         this.add(data)
     }
 }
-export default decorate( new TasksStore(), {
+
+export default decorate(new TasksStore(), {
     tasks: observable,
     delete: action
 })

@@ -1,6 +1,4 @@
 import React from 'react'
-import {Card, Grid, Label, Segment} from "semantic-ui-react";
-import PropTypes from 'prop-types'
 import TasksStore from '../stores/tasks_store'
 
 class Add extends React.Component {
@@ -10,7 +8,7 @@ class Add extends React.Component {
     }
     onBtnClickHandler = e => {
         e.preventDefault()
-        const { /*author_id,*/ text } = this.state
+        const { /*author_id,*/ text} = this.state
         TasksStore.add({
             id: +new Date(),
             author_id: localStorage.getItem('current_user'),
@@ -18,18 +16,19 @@ class Add extends React.Component {
         })
     }
     handleChange = e => {
-        const { id, value } = e.currentTarget
-        this.setState({ [id]: e.currentTarget.value })
+        const {id, value} = e.currentTarget
+        this.setState({[id]: e.currentTarget.value})
     }
     validate = () => {
-        const { author_id, text } = this.state
+        const {author_id, text} = this.state
         if (/*author_id.trim() &&*/ text.trim()) {
             return true
         }
         return false
     }
+
     render() {
-        const { author_id, text } = this.state
+        const {author_id, text} = this.state
         return (
             <form className="add">
                 <textarea
@@ -43,7 +42,8 @@ class Add extends React.Component {
                     className="add__btn"
                     onClick={this.onBtnClickHandler}
                     disabled={!this.validate()}
-                > готово </button>
+                > готово
+                </button>
             </form>
         )
     }
