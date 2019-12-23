@@ -4,6 +4,7 @@ import {withRouter} from 'react-router-dom'
 import logoImg from '../logo.png'
 import AuthService from '../services/auth.service'
 import Tasks from "./tasks";
+import store_auth from "../stores/store_auth"
 
 class IndexView extends React.Component {
     constructor(props) {
@@ -11,7 +12,9 @@ class IndexView extends React.Component {
     }
 
     handleSignOut = () => {
+
         AuthService.logout()
+        store_auth.setIsAuth()
         this.props.history.push('/login')
     }
 

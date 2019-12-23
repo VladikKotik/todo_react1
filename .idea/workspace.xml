@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2702967-7917-437e-be63-3a2986c8c8bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/PrivateRoute.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/add.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PrivateRoute.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PrivateRoute.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/edit.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/task.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stores/store_auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/store_auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/tasks_store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/tasks_store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +95,8 @@
       <workItem from="1575784795917" duration="11917000" />
       <workItem from="1575982943918" duration="8018000" />
       <workItem from="1576761663203" duration="7257000" />
-      <workItem from="1577020264977" duration="8000000" />
+      <workItem from="1577020264977" duration="8160000" />
+      <workItem from="1577067763038" duration="1447000" />
     </task>
     <task id="LOCAL-00001" summary="first commit(it works)">
       <created>1574604469337</created>
@@ -165,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577027450828</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="edit+starting refactor">
+      <created>1577042296890</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1577042296890</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,8 +1,7 @@
 import React from "react";
 import {Button, Card} from "semantic-ui-react";
 import TasksStore from "../stores/tasks_store";
-import {Link} from "react-router-dom";
-import { browserHistory } from 'history'
+import { withRouter } from "react-router-dom";
 
 class Task extends React.Component {
     render() {
@@ -24,7 +23,7 @@ class Task extends React.Component {
                         удалить
                     </Button>
                     <Button className="ui button" onClick={edit}>
-                            Редактировать
+                        Редактировать
                     </Button>
                 </Card.Content>
             </Card>
@@ -32,4 +31,4 @@ class Task extends React.Component {
     }
 }
 
-export default Task;
+export default withRouter(Task);

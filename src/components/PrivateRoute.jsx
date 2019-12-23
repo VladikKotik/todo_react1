@@ -5,6 +5,7 @@ import {observer} from "mobx-react";
 
 function PrivateRoute({component, ...rest}) {
     let isloggedin_ = store_auth.isLoggedIn
+    console.log(isloggedin_);
 
     return (
         <Route

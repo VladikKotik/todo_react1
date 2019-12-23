@@ -2,6 +2,8 @@ import React from 'react'
 import {useLocation, withRouter} from "react-router-dom";
 import {Button, Form, Grid, Header, Message, Segment} from 'semantic-ui-react'
 import AuthService from "../services/auth.service";
+import AuthStore from '../stores/store_auth'
+import {observer} from "mobx-react";
 
 // const Settings = () => {
 //     let location = useLocation();
@@ -33,11 +35,10 @@ class AuthView extends React.Component {
 
     signIn() {
         AuthService.login(this.state.email, this.state.password)
-            .then(() => {
-                console.log('oooaooao')
+            .then((res) => {
+                console.log(res)
+                AuthStore.setIsAuth()
                 this.props.history.push('/')
-                console.log('oooaooao2')
-
             })
             .catch(error => {
                 this.setState({error})
@@ -94,4 +95,4 @@ class AuthView extends React.Component {
     }
 }
 
-export default withRouter(AuthView)
+export default withRouter(observer(AuthView))
